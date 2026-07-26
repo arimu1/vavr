@@ -32,10 +32,13 @@
             <optional>true</optional>
         </dependency>
 
+        <!-- Annotations only: they carry no runtime behaviour and module-info declares
+             `requires static org.jspecify`, so consumers must not inherit this transitively. -->
         <dependency>
             <groupId>org.jspecify</groupId>
             <artifactId>jspecify</artifactId>
             <version>1.0.0</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
